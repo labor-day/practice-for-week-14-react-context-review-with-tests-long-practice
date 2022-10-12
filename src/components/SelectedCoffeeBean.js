@@ -1,5 +1,16 @@
+import { useCoffee } from "../context/CoffeeContext";
+
 const SelectedCoffeeBean = () => {
-  return null;
+
+  let {coffeeBean} = useCoffee();
+
+  return (
+    <div className="selected-coffee">
+      <h2>
+        {coffeeBean.name}
+      </h2>
+    </div>
+  );
 }
 
 export default SelectedCoffeeBean;
